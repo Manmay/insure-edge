@@ -1,5 +1,6 @@
 package za.co.polygon.service;
 
+import org.junit.Ignore;
 import za.co.reverside.service.NotificationService;
 import static org.mockito.Mockito.mock;
 
@@ -17,6 +18,7 @@ import za.co.reverside.domain.QuotationOption;
 import za.co.reverside.domain.QuotationRequest;
 import za.co.reverside.repository.MessageRepository;
 
+@Ignore
 @RunWith(MockitoJUnitRunner.class)
 public class TestNotificationService {
 	

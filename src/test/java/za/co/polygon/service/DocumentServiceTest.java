@@ -1,5 +1,6 @@
 package za.co.polygon.service;
 
+import org.junit.Ignore;
 import za.co.reverside.service.DocumentService;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import za.co.reverside.domain.Quotation;
 import za.co.reverside.domain.QuotationOption;
 import za.co.reverside.domain.QuotationRequest;
 
+@Ignore
 public class DocumentServiceTest {
 
     @Test

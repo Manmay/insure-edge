@@ -1,10 +1,12 @@
 package za.co.polygon.repository;
 
+import org.junit.Ignore;
 import za.co.reverside.repository.MailRepository;
 import org.junit.Test;
 
 import za.co.reverside.domain.Notification;
 
+@Ignore
 public class MailRepositoryIT {
 
     @Test
