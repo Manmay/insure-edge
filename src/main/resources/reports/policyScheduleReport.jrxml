@@ -12,7 +12,7 @@
 	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
-	<parameter name="policy" class="za.co.polygon.domain.Policy"/>
+	<parameter name="policy" class="za.co.reverside.domain.Policy"/>
 	<parameter name="POLYGON_REPORT_FILE_RESOLVER" class="net.sf.jasperreports.engine.util.FileResolver"/>
 	<field name="indemnityItemOption" class="java.lang.String"/>
 	<field name="indemnityValue" class="java.lang.String"/>

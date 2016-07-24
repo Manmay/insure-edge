@@ -5,7 +5,7 @@
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="POLYGON_REPORT_FILE_RESOLVER" class="net.sf.jasperreports.engine.util.FileResolver"/>
-	<parameter name="policy" class="za.co.polygon.domain.Policy"/>
+	<parameter name="policy" class="za.co.reverside.domain.Policy"/>
 	<field name="indemnityItemOption" class="java.lang.String"/>
 	<field name="indemnityValue" class="java.lang.String"/>
 	<field name="sumInsured" class="java.lang.Double"/>
