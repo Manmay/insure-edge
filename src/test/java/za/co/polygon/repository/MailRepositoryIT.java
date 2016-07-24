@@ -1,8 +1,9 @@
 package za.co.polygon.repository;
 
+import za.co.reverside.repository.MailRepository;
 import org.junit.Test;
 
-import za.co.polygon.domain.Notification;
+import za.co.reverside.domain.Notification;
 
 public class MailRepositoryIT {
 

@@ -1,5 +1,6 @@
 package za.co.polygon.service;
 
+import za.co.reverside.service.NotificationService;
 import static org.mockito.Mockito.mock;
 
 import java.util.ArrayList;
@@ -10,11 +11,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import za.co.polygon.domain.PolicyRequest;
-import za.co.polygon.domain.Quotation;
-import za.co.polygon.domain.QuotationOption;
-import za.co.polygon.domain.QuotationRequest;
-import za.co.polygon.repository.MessageRepository;
+import za.co.reverside.domain.PolicyRequest;
+import za.co.reverside.domain.Quotation;
+import za.co.reverside.domain.QuotationOption;
+import za.co.reverside.domain.QuotationRequest;
+import za.co.reverside.repository.MessageRepository;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestNotificationService {

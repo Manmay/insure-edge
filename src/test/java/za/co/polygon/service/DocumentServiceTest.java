@@ -1,5 +1,6 @@
 package za.co.polygon.service;
 
+import za.co.reverside.service.DocumentService;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,10 +13,10 @@ import org.junit.Test;
 //import com.itextpdf.text.DocumentException;
 
 import net.sf.jasperreports.engine.JRException;
-import za.co.polygon.domain.Product;
-import za.co.polygon.domain.Quotation;
-import za.co.polygon.domain.QuotationOption;
-import za.co.polygon.domain.QuotationRequest;
+import za.co.reverside.domain.Product;
+import za.co.reverside.domain.Quotation;
+import za.co.reverside.domain.QuotationOption;
+import za.co.reverside.domain.QuotationRequest;
 
 public class DocumentServiceTest {
 
