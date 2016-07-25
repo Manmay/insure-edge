@@ -31,10 +31,10 @@ public class MailRepository {
     private Session session;
 
     @Autowired
-    public MailRepository(@Value("${polygon.mail.hostname}")String host,
-    		@Value("${polygon.mail.port}")int port,
-    		@Value("${polygon.mail.username}")final String user,
-    		@Value("${polygon.mail.password}")final String pass) {
+    public MailRepository(@Value("${reverside.mail.hostname}")String host,
+    		@Value("${reverside.mail.port}")int port,
+    		@Value("${reverside.mail.username}")final String user,
+    		@Value("${reverside.mail.password}")final String pass) {
     	
     	this.setUsername(user);
         Properties props = new Properties();

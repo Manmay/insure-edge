@@ -22,10 +22,10 @@ public class NotificationService {
 	private MessageRepository messageRepository;
 	private Notification notification;
 
-	@Value("${polygon.application.hostname}")
+	@Value("${reverside.application.hostname}")
 	private String hostname;
 
-	@Value("${polygon.application.port}")
+	@Value("${reverside.application.port}")
 	private String port;
 
 	public void sendNotificationForNewQuotationRequest(QuotationRequest quotationRequest, Broker broker) {
@@ -35,7 +35,7 @@ public class NotificationService {
 		String message = String.format(
 				"Ref : %s" + "\n"
 						+ "Click the link below to view quotation request : " + "\n"
-						+ "http://%s:%s/polygon/broker.html#/quotation-requests/%s",
+						+ "http://%s:%s/reverside/broker.html#/quotation-requests/%s",
 						quotationRequest.getReference(),
 						hostname,
 						port,
@@ -94,7 +94,7 @@ public class NotificationService {
 						+"Please find the attachement t view your quotation" + "\n"
 						+ "\n"
 						+ "Please click the link below to apply for a policy" + " \n"
-						+ "http://%s:%s/polygon/client.html#/quotations/%s " + " \n"
+						+ "http://%s:%s/reverside/client.html#/quotations/%s " + " \n"
 						+ "\n"
 						+ "Thanks" + "\n"
 						+ "Polygon Team",
@@ -116,7 +116,7 @@ public class NotificationService {
 		String message = String.format(
 				"Dear " +underWriterName+ ",\n\n"
 						+ "You have a new Policy Request for Ref. :  %s\nClick the link below to view policy request details: " + "\n"
-						+ "http://%s:%s/polygon/underwritter.html#/policy-requests/%s\n\nKind Regards,",
+						+ "http://%s:%s/reverside/underwritter.html#/policy-requests/%s\n\nKind Regards,",
 						policyRequest.getQuotation().getQuotationRequest().getReference(),
 						hostname,
 						port,
@@ -137,7 +137,7 @@ public class NotificationService {
 		String subject = "New Claim Request";
 		String message = String.format("Dear " + claimsName +",\n \n"
 				+ "You have a new Claim Request For Claim No : %s\n click the link below to view claim request" + "\n"
-				+ "http://%s:%s/polygon/claim-admin.html#/claim-requests/%s\n\nKind Regards,",
+				+ "http://%s:%s/reverside/claim-admin.html#/claim-requests/%s\n\nKind Regards,",
 				claimRequest.getClaimNumber(),
 				hostname,
 				port,
@@ -154,7 +154,7 @@ public class NotificationService {
 		String message = String.format("Dear Underwriter,\n \n"
 				+ "You have a new POLICY "+policyRequestType.getRequestType().getRequestType()+
 				" REQUEST For Policy ["+policyRequestType.getPolicy().getReference()+"]. \nPolicy request Ref No : %s\n\n click the link below to view claim request" + "\n"
-				+ "http://%s:%s/polygon/claim-admin.html#/claim-requests/%s\n\nKind Regards,",
+				+ "http://%s:%s/reverside/claim-admin.html#/claim-requests/%s\n\nKind Regards,",
 				policyRequestType.getReference(),
 				hostname,
 				port,
