@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="polygon">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Insure EDGE</title>
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="/css/client.css" rel="stylesheet">
+        <script type="text/javascript"  src="/lib/jquery/jquery.min.js"></script>
+        <script  type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script  type="text/javascript" src="/lib/angular/angular.min.js"></script>
+        <script  type="text/javascript" src="/lib/angular/angular-route.min.js"></script>
+        <script  type="text/javascript" src="/lib/angular/angular-messages.js"></script>
+        <script  type="text/javascript" src="/js/client.js"></script>
+    </head>
+
+    <body>
+
+        <div ng-include="'/html/client-header.html'"></div>
+
+        <div ng-view style="padding-top: 80px;" autoscroll="true">Loading....</div>
+			
+        <div  ng-include="'/html/client-footer.html'"></div>
+
+        <!-- </div> -->
+
+    </body>
+
+</html>
