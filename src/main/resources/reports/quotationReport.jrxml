@@ -30,7 +30,7 @@
 				</box>
 				<image scaleImage="FillFrame">
 					<reportElement x="0" y="0" width="555" height="80" />
-					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/polygon-logo.jpg").toString()]]></imageExpression>
+					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside-header.png").toString()]]></imageExpression>
 				</image>
 				<staticText>
 					<reportElement x="34" y="85" width="20" height="20" />
@@ -232,7 +232,7 @@
 				<reportElement x="0" y="0" width="555" height="99" />
 				<image scaleImage="FillFrame">
 					<reportElement positionType="FixRelativeToBottom" x="0" y="10" width="555" height="89" />
-					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/polygon-footer.png").toString()]]></imageExpression>
+					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside-footer.png").toString()]]></imageExpression>
 				</image>
 			</frame>
 		</band>
