@@ -14,12 +14,14 @@
     <div class="row">
 		<div class="col-md-12 text-center">
 			<div>
-		    	<div><img src="/img/insurance.png"></div>
-				<div style="font: bold; font-size: 50px; font-family: cursive;">
+		    	<div class="text-center">
+		    		<img src="/img/insurance.png" width="150px" >
+		    	</div>
+				<div style="font: bold; font-size: 3em; font-family: cursive;">
 					<span style="color: black;">Insure</span> 
 					<span style="color: darkred;">EDGE</span>
 				</div>
-				<div style="font: bold; font-size: 15px;  color: black; font-family: cursive;">
+				<div style="font: bold; color: black; font-family: cursive;">
 				    Giving you an edge | Simplify Insurance
 				</div>
 			</div>
@@ -32,13 +34,13 @@
     	</div>
     </div>
 
-    <div class="row" style="padding: 25px;" > 
+    <div class="row" style="padding: 25px 0px 25px 0px;" > 
 	    
 		<div class="col-md-3" ng-repeat="product in products">
 			<div class="panel panel-default" style="box-shadow: 0 0 30px black;">
-				<div class="panel-body" align="center" style="height: 300px;">
+				<div class="panel-body" align="center" style="height: 320px;">
 					<img class="img-circle" ng-src="{{product.image}}"  width="140" height="140">
-					<h3>{{product.name}}</h3>
+					<h3 style="height: 80px;">{{product.name}}</h3>
 					<p>{{product.description}}</p>
 				</div>
 				<div class="panel-footer text-right">
