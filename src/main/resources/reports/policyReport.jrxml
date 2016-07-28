@@ -24,7 +24,11 @@
 				</box>
 				<image scaleImage="FillFrame">
 					<reportElement x="141" y="20" width="279" height="71" />
+<<<<<<< HEAD
 					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside.jpg").toString()]]></imageExpression>
+=======
+					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside.png.jpg").toString()]]></imageExpression>
+>>>>>>> e8783d7bd07a723b1d8e8e2c6a822016c2a3bc99
 				</image>
 				<staticText>
 					<reportElement x="0" y="117" width="555" height="30" />
@@ -423,7 +427,11 @@
 				</image>
 				<image scaleImage="FillFrame">
 					<reportElement x="388" y="10" width="160" height="40" />
+<<<<<<< HEAD
 					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside.jpg").toString()]]></imageExpression>
+=======
+					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside.png").toString()]]></imageExpression>
+>>>>>>> e8783d7bd07a723b1d8e8e2c6a822016c2a3bc99
 				</image> -->
 				<textField>
 					<reportElement x="0" y="10" width="555" height="20" />

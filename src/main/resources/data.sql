@@ -11,8 +11,13 @@ insert into products(name, description, image) values('Static and In Transit Cov
 
 
 /*broker*/
+<<<<<<< HEAD
 insert into brokers(code, name, email) values ('00001', 'Reverside', 'santanu.pani@reverside.co.za');
 /*insert into brokers(code, name, email) values ('00001', 'Coin Risk Management', 'binod.sethi@reverside.co.za');
+=======
+insert into brokers(code, name, email) values ('00001', 'Blue Quanta', 'santanu.pani@reverside.co.za');
+--insert into brokers(code, name, email) values ('00001', 'Coin Risk Management', 'binod.sethi@reverside.co.za');
+>>>>>>> e8783d7bd07a723b1d8e8e2c6a822016c2a3bc99
 insert into brokers(code, name, email) values ('00002', 'Admin Focus (Pty) Ltd', 'thabo.thulare@reverside.co.za');
 insert into brokers(code, name, email) values ('00003', 'Optimum Financial Services Group', 'lesetja.konaite@reverside.co.za');
 insert into brokers(code, name, email) values ('00004', 'Status Insurance Brokers (Pty) Ltd', 'info@statusib.co.za');
