@@ -1,3 +1,4 @@
+--use polygon;
 /* table : login */
 create table login (
     id integer auto_increment not null primary key,
@@ -9,6 +10,28 @@ create table login (
     role varchar(16) not null
 );
 
+
+/* table : user Regsistration */
+create table registration (
+    id integer auto_increment not null primary key,
+    login_id integer not null,
+    first_name varchar(32) not null,
+    last_name varchar(32) not null,
+    password varchar(32) not null,
+    email varchar(64) not null,
+    policynumber varchar(15) not null,
+    enabled boolean not null
+);
+
+
+/* table : carriers */
+create table carriers (
+    id integer auto_increment not null primary key,
+    description varchar(64) not null 
+);
+
+
+
 /* table : product */
 create table products(
     id integer auto_increment not null primary key, 
@@ -16,6 +39,22 @@ create table products(
     description varchar(256),
     image varchar(128) 
 );
+
+/* table : jasper_images */
+create table jasper_images(
+    id integer auto_increment not null primary key, 
+    name varchar(64) not null, 
+    image varchar(128) 
+);
+
+
+/* table : device */
+create table devices(
+     id integer auto_increment not null primary key,
+     name varchar(256) not null
+     
+);
+
 
 /* table: answer_types */
 create table answer_types(
@@ -60,8 +99,8 @@ create table brokers(
 create table quotation_requests(
     id integer auto_increment not null primary key,
     reference varchar(64) not null,
-    applicant_name varchar(32) not null,
-    company_name varchar(32) not null,
+    applicant_name varchar(64) not null,
+    company_name varchar(256) not null,
     applicant_email varchar(64) not null,
     broker_id integer not null,
     product_id integer not null,
@@ -87,37 +126,37 @@ create table location_options(
     id integer auto_increment not null primary key,
     quotation_request_id integer not null,
     commodity varchar(256) not null,
-    from_location varchar(32) not null,
-    to_location varchar(32),
-    distance varchar(32) not null,
+    from_location varchar(256),
+    to_location varchar(256),
+    distance varchar(64),
     max_limit double,
     static_limit double,
     static_max_amount varchar(32),
     sabs_category varchar(32),
-    total_value varchar(64),
-    transit_total_value varchar(64),
-    total_value_static varchar(64),
-    professional_carriers varchar(32),
+    total_value varchar(256),
+    transit_total_value varchar(256),
+    total_value_static varchar(256),
+    professional_carriers varchar(64),
     duration varchar(32) not null,
     is_first_loss_cover boolean,
     is_goods_moved boolean,
     is_goods_moved_static boolean,
     is_service_carrier boolean not null,
-    carrier_name varchar(32),
-    specific_carrier varchar(32),
-    goods_description varchar(64),
+    carrier_name varchar(64),
+    specific_carrier varchar(64),
+    goods_description varchar(256),
     is_store_vault boolean,
     is_concrete_secured boolean,
     is_seismic_detector boolean,
     is_cctv boolean,
     is_alarmed boolean,
-    storage_type varchar(32),
-    vault_address varchar(128),
+    storage_type varchar(64),
+    vault_address varchar(256),
     other_secure_means varchar(256),
     constraint location_options_fk1 foreign key (quotation_request_id) references quotation_requests (id)   
 );
 
-/* table : quotation_questoionnaires */
+/* table : answers */
 create table answers(
     id integer auto_increment not null primary key,
     quotation_request_id integer not null,
@@ -133,8 +172,8 @@ create table quotations(
     quotation_request_id integer not null,
     created_date date not null,
     expired_date date null,
-    constraint quotations_fk1 foreign key (quotation_request_id) references quotation_requests (id)
-    
+    note varchar(256) null, 
+   constraint quotations_fk1 foreign key (quotation_request_id) references quotation_requests (id)
 );
 
 /* table : quotation_options  */
@@ -184,9 +223,9 @@ create table policy_requests(
 create table bank_accounts(
       id integer auto_increment not null primary key,
       account_number varchar(32) not null,
-      account_name varchar(32) not null,
-      branch varchar(32) not null,
-      bank_name varchar(32) not null,
+      account_name varchar(64) not null,
+      branch varchar(64) not null,
+      bank_name varchar(64) not null,
       account_type varchar(32) not null
 );
 
@@ -199,7 +238,7 @@ create table contacts(
       work_tel_number varchar(32) not null,
       fax_number varchar(32) not null,
       email varchar(32) not null,
-      contact_person varchar(32) not null,
+      contact_person varchar(32) not null
 );
 
 /* table : insurers */
@@ -215,7 +254,7 @@ create table clients (
       id integer auto_increment not null primary key,
       bank_account_id integer not null,
       contact_id integer not null,
-      company_name varchar(64) not null,
+      company_name varchar(256) not null,
       reg_no varchar(32) not null,
       income_tax_number varchar(32),
       designation varchar(32) not null,
@@ -232,7 +271,7 @@ create table underwriters(
     first_name varchar(64) not null, 
     middle_name varchar(64) not null,
     last_name varchar(64) not null,
-    email varchar(64) not null,
+    email varchar(64) not null
 );
 
 /* table : sub_agents */
@@ -243,7 +282,7 @@ create table sub_agents(
     middle_name varchar(64) not null,
     last_name varchar(64) not null,
     email varchar(64) not null,
-    constraint sub_agents_fk1 foreign key(broker_id) references brokers(id),
+    constraint sub_agents_fk1 foreign key(broker_id) references brokers(id)
 );
 
 
@@ -288,6 +327,39 @@ create table policies(
     constraint policies_fk3 foreign key(underwriter_id) references underwriters(id)
 );
 
+/* table : policy endorsements */
+create table endorsements(
+    id integer auto_increment not null primary key,
+    policy_id integer not null,
+    endorsement_date date not null,
+    inception_date date,
+    renewal_date date,
+    product_name varchar(128),
+    underwriting_year integer,
+    status varchar(20),
+    frequency varchar(30),
+    sasria_frequency varchar(30),
+    device varchar(30),
+    underwriter_commission decimal,
+    broker_commission decimal,
+    uma_fee decimal,
+    policy_fee decimal,
+    initial_fee decimal,
+    sum_insured decimal,
+    max_sum_insured decimal,
+    premium decimal,
+    sasria_premium decimal,
+    schedule_attaching varchar(1024),
+    type_of_cover varchar(1024),
+    subject_matter varchar(64),
+    excess_structure varchar(256),
+    special_condition varchar(1024),
+    conveyances varchar(256),
+    geographical_duration varchar(2048),
+    notes varchar(256),
+    constraint endorsements_fk1 foreign key (policy_id) references policies (id)
+);
+
 /* table : indemnity_option */
 
 create table indemnity_options(
@@ -318,7 +390,7 @@ create table claim_questionnaires(
    id integer auto_increment not null primary key,
    claim_type_id integer not null,
    claim_answer_type_id integer not null,
-   question varchar(124) not null,
+   question varchar(128) not null,
    sequence_number integer not null,
    is_required boolean not null,
    constraint claim_questionnaires_fk1 foreign key (claim_answer_type_id) references claim_answer_types(id),
@@ -337,10 +409,12 @@ create table claim_answer_values(
 create table claim_requests(
     id integer auto_increment not null primary key,
     claim_number varchar(64) not null,
-    policy_id integer not null,
+    policy_number varchar(32) not null,
+    name varchar(64) not null,
+    email varchar(64) not null,
     claim_type_id integer not null,
     create_date date not null,
-    status varchar(16) not null,
+    status varchar(32) not null,
     investigation_report longblob,
     confirmation_amount longblob,
     proof_of_pickup longblob,
@@ -355,8 +429,19 @@ create table claim_requests(
     photo2 longblob,
     photo3 longblob,
     photo4 longblob,
-    photo5 longblob,
-    constraint claim_request_fk1 foreign key (policy_id) references policies(id),
+    investigation_report_c varchar(256),
+    confirmation_amount_c varchar(256),
+    proof_of_pickup_c varchar(256),
+    case_number_c varchar(256),
+    amount_banked_c varchar(256),
+    trans_track_document_c varchar(256),
+    quote_c varchar(256),
+    report_c varchar(256),
+    affidavit_c varchar(256),
+    photo1_c varchar(256),
+    photo2_c varchar(256),
+    photo3_c varchar(256),
+    photo4_c varchar(256),
     constraint claim_request_fk2 foreign key (claim_type_id) references claim_types(id)
 );
 
@@ -367,6 +452,22 @@ create table claim_answers(
      answer varchar(512),
      attachment longblob,
      constraint claim_answer_fk1 foreign key (claim_request_id) references  claim_requests(id)
+);
+
+
+create table release_form(
+    id integer auto_increment not null primary key,
+    claim_number varchar(64) not null,
+    policy_number varchar(64) not null,
+    claim_request_id varchar(32),
+    insured varchar(64) not null,
+    amount_claim double not null,
+    less_excess varchar(64) not null,
+    total_payeble double not null,
+    good_description varchar(256) not null,
+    loss_date varchar(64) not null,
+    loss_description varchar(256) not null,
+    constraint release_form_fk1 foreign key (claim_request_id) references claim_requests(id) 
 );
 
 create table request_types(
@@ -411,7 +512,7 @@ create table policy_request_type(
 );
 
 create table request_answers(
-      id integer auto_increment not null primary key,
+     id integer auto_increment not null primary key,
      request_type_id integer not null,
      question varchar(128) not null,
      answer varchar(512),

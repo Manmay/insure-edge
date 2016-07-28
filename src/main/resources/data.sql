@@ -1,7 +1,7 @@
 /*login*/
 insert into login (user_name, password, first_name, last_name, enabled, role) values('admin', 'secret', 'admin','admin', true, 'ROLE_ADMIN');
-insert into login (user_name, password, first_name, last_name, enabled, role) values('broker', 'secret', 'Hentie','Snyder', true, 'BROKER');
-insert into login (user_name, password, first_name, last_name, enabled, role) values('underwritter', 'secret', 'Eric','Lehmann', true, 'UNDERWRITTER');
+insert into login (user_name, password, first_name, last_name, enabled, role) values('broker', 'secret', 'Ardhendu','Patri', true, 'BROKER');
+insert into login (user_name, password, first_name, last_name, enabled, role) values('underwritter', 'secret', 'Manmay','Mohanty', true, 'UNDERWRITTER');
 
 /*products*/
 insert into products(name, description, image) values('Cash and Valuables in Transit', 'All risk cover for your cash and valuables whilst in transit.', '/img/products/Cash and Valuables in Transit.jpg');
@@ -11,8 +11,8 @@ insert into products(name, description, image) values('Static and In Transit Cov
 
 
 /*broker*/
-insert into brokers(code, name, email) values ('00001', 'Blue Quanta', 'polygon.broker@gmail.com');
---insert into brokers(code, name, email) values ('00001', 'Coin Risk Management', 'binod.sethi@reverside.co.za');
+insert into brokers(code, name, email) values ('00001', 'Reverside', 'santanu.pani@reverside.co.za');
+/*insert into brokers(code, name, email) values ('00001', 'Coin Risk Management', 'binod.sethi@reverside.co.za');
 insert into brokers(code, name, email) values ('00002', 'Admin Focus (Pty) Ltd', 'thabo.thulare@reverside.co.za');
 insert into brokers(code, name, email) values ('00003', 'Optimum Financial Services Group', 'lesetja.konaite@reverside.co.za');
 insert into brokers(code, name, email) values ('00004', 'Status Insurance Brokers (Pty) Ltd', 'info@statusib.co.za');
@@ -23,7 +23,7 @@ insert into brokers(code, name, email) values ('00008', 'Multi Risk Admin (Pty) 
 insert into brokers(code, name, email) values ('00009', 'Lazarus Dash and Associates (Pty) Ltd', 'Brian@lazdash.co.za');
 insert into brokers(code, name, email) values ('00010', 'Willem Jacobus Nienaber', 'wjnienaber@telkomsa.net');
 insert into brokers(code, name, email) values ('00011', 'Deposita Systems (Pty) Ltd', 'lizaan.botha@reverside.co.za');
-
+*/
 
 /*answer_type*/
 insert into answer_types(answer_type) values('text');
@@ -92,8 +92,8 @@ insert into questionnaires(product_id, sequence_number, question, answer_type_id
 insert into questionnaires(product_id, sequence_number, question, answer_type_id, depends_on, on_answer, is_required)  values('4', '31', 'Please provide details of your previous insurance company :'                     ,                    1,    6,  'true', 'true');
 insert into questionnaires(product_id, sequence_number, question, answer_type_id, depends_on, on_answer, is_required)  values('4', '32', 'Do you require SASRIA cover ?',                 4,  null,    null, 'false');
 
-insert into sub_agents(broker_id,first_name,middle_name,last_name,email) values(1,'Hentie','Hentie','Synder','hentie.synder@polygongroup.co.za');
-insert into sub_agents(broker_id,first_name,middle_name,last_name,email) values(1,'Susan','Susan','Otto','susan.otto@polygongroup.co.za');
+insert into sub_agents(broker_id,first_name,middle_name,last_name,email) values(1,'Ardhendu','Ardhendu','Patri','ardhendu.patri@reverside.co.za');
+insert into sub_agents(broker_id,first_name,middle_name,last_name,email) values(1,'Manmay','Manmay','Mohanty','manmay.mohanty@reverside.co.za');
 
 insert into underwriters(first_name,middle_name,last_name,email) values('Lessely','Lessley','Kruger','lessely.kruger@genric.co.za');
 insert into underwriters(first_name,middle_name,last_name,email) values('Marissa','Marissa','Lehman','marissa@lehman@genric.co.za');
