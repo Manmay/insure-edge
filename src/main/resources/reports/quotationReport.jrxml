@@ -30,7 +30,7 @@
 				</box>
 				<image scaleImage="FillFrame">
 					<reportElement x="0" y="0" width="555" height="80" />
-					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/polygon-logo.jpg").toString()]]></imageExpression>
+					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside-header.png").toString()]]></imageExpression>
 				</image>
 				<staticText>
 					<reportElement x="34" y="85" width="20" height="20" />
@@ -232,7 +232,7 @@
 				<reportElement x="0" y="0" width="555" height="99" />
 				<image scaleImage="FillFrame">
 					<reportElement positionType="FixRelativeToBottom" x="0" y="10" width="555" height="89" />
-					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/polygon-footer.png").toString()]]></imageExpression>
+					<imageExpression><![CDATA[$P{POLYGON_REPORT_FILE_RESOLVER}.resolveFile("/reports/reverside-footer.png").toString()]]></imageExpression>
 				</image>
 			</frame>
 		</band>
@@ -253,7 +253,7 @@
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font fontName="Lucida Bright" size="10"/>
 					</textElement>
-					<text><![CDATA[HJT SNYDER]]></text>
+					<text><![CDATA[ARDHENDU PATRI]]></text>
 				</staticText>
 				<textField>
 					<reportElement x="34" y="4" width="520" height="56" />

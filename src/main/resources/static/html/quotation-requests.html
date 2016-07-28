@@ -221,7 +221,7 @@
 															<div class="form-group"
 																ng-if="quotationRequest.product.id == 2 || quotationRequest.product.id == 4">
 																<label class="control-label" for="sabsCategory">Please
-																	select the SABS safety category of the vault ?</label> <input
+																	select the SABS safety category of the vault?</label> <input
 																	type="text" class="form-control"
 																	ng-model="option.sabsCategory" readonly>
 															</div>
@@ -422,9 +422,9 @@
 					<button ng-if="isQuotationCreated" type="submit"
 						class="btn btn-success" ng-click="save(form)">Create
 						Quotation</button>
-					<button class="btn btn-info" ng-readonly="quotationView"
+					<!-- <button class="btn btn-info" ng-readonly="quotationView"
 						ng-if="isQuotationCreated == false"
-						ng-click="updateQuotation(form)">Update/Preview Quotation</button>
+						ng-click="updateQuotation(form)">Update/Preview Quotation</button> -->
 					<button class="btn btn-warning" ng-click="changeMode(undefined)">Cancel</button>
 					<button type="submit" class="btn btn-success"
 						ng-click="submitQuotation()" ng-if="isQuotationCreated == false">Submit
