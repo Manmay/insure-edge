@@ -733,7 +733,7 @@ underwritter.controller('policyCtrl', function ($scope, $rootScope, $http, $rout
 		};
 		$scope.wording = {
 				'scheduleAttaching': '1) SPECIALISED VALUABLES INSURANCE POLICY WORDING-GENERAL TERMS AND CONDITIONS' +
-				'\n2) POLYGON GENERAL COMPUTER NUCLEAR EXCEPTIONS\n3) POLYGON CASH AND VALUABLES IN TRANSIT WORDING' +
+				'\n2) REVERSIDE GENERAL COMPUTER NUCLEAR EXCEPTIONS\n3) REVERSIDE CASH AND VALUABLES IN TRANSIT WORDING' +
 				'\n4) VAULT AND STATIC RISK COVER WORDING',
 				'typeOfCover': 'Theft, armed robbery, hijacking and accidental damage or damage as a result of any attempt theft of cash insured. ' +
 				'whilst in the custody and care of Protea Coin Group and/or whilst within the Nedbank Camera Managed Unit at the premises declared' +
